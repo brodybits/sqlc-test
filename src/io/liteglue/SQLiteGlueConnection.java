@@ -9,7 +9,7 @@ package io.liteglue;
     SQLDatabaseHandle mydb = new SQLGDatabaseHandle(filename, flags);
     int rc = mydb.open();
 
-    if (rc != SQLCode.OK) throw new java.sql.SQLException("sqlite3_open_v2 failure: " + db.getLastErrorMessage(), "failure", rc);
+    if (rc != SQLCode.OK) throw new java.sql.SQLException("sqlite3_open_v2 failure: " + mydb.getLastErrorMessage(), "failure", rc);
     this.db = mydb;
   }
 
